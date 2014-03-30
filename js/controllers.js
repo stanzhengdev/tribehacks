@@ -43,6 +43,13 @@ controller('rawCtrl', function($scope, $http, dataService) {
         };
     }
 
+    $scope.datacontainerInit = function(text) {
+
+        $scope.text = text;
+        // Get a list of projects for user
+
+    }
+
 
     $scope.chooseSample = function(sample) {
         $scope.sample = sample;
