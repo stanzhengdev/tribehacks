@@ -13,7 +13,7 @@
 			<tbody>
 				<?php foreach($this->survey->questions as $question):?>
 				<tr>
-					<td><?=$question->id?></td>
+					<td><a href="?r=question/view&id=<?php echo $question->id?>"><?=$question->id?></a></td>
 					<td><?=$question->title?></td>
 					<td><?=$question->description?></td>
 					<td><?=$question->survey_id?></td>

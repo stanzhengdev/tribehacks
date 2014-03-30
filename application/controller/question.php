@@ -32,5 +32,15 @@ class Controller_Question{
 
 		$app->render('layout/footer');
 	}
+
+	public function view()
+	{
+		//$query = Model_Answer::query();
+		//var_dump($query);
+		$app = new App();
+		$app->render('layout/header');
+		$app->render('question/view');
+		$app->render('layout/footer');
+	}
 }
 ?>

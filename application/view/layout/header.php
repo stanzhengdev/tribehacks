@@ -21,7 +21,6 @@
   </script>
   <link href="vendor/gumbyframework/gumby/css/gumby.css" type="text/css" rel="stylesheet">
   <script src="vendor/gumbyframework/gumby/js/libs/modernizr-2.6.2.min.js"></script>
-  <script src="vendor/ckeditor/ckeditor.js"></script>
   <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
@@ -30,7 +29,8 @@
         <a href="#" gumby-trigger="#nav1 &gt; .row &gt; ul" class="toggle"><i class="icon-menu"></i></a>
         <h1 class="four columns logo">
           <a href="?r=site">
-            <img src="public/img/logo.png" gumby-retina />
+            <!-- <img src="public/img/logo.png" gumby-retina /> -->
+            Widgetize.
           </a>
         </h1>
         <ul class="eight columns">
