@@ -3,16 +3,16 @@
       <div class="container">
         <div class="row-fluid">
           <div class="span4">
-            <p>A project by <a href="http://www.densitydesign.org">DensityDesign</a></p>
-            <p>&copy; 2013</p>
+            <p>D3 Widget Generator </p>
+            <p>&copy; <?=date('Y')?></p>
           </div>
           <div class="span4">
             <p><a href="mailto:raw@densitydesign.org">raw@densitydesign.org</a></p>
             <p><a href="http://twitter.com/densitydesign">@densitydesign</a></p>
           </div>
           <div class="span4">
-            <p><a href="http://github.com/densitydesign/raw">GitHub</a></p>
-            <p><a href="https://groups.google.com/forum/?hl=en#!forum/densitydesign-raw">Google group</a></p>
+            <p><a href="http://github.com/stanzheng/tribehacks">GitHub</a></p>
+            <!-- <p><a href="">Google group</a></p> -->
           </div>
         </div>
       </div>

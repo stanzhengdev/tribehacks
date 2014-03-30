@@ -30,16 +30,16 @@
         <div id="header" class="navbar">
         <div class="navbar-inner">
         <div class="container"><a href="/" class="brand">WIDGEN</a>
-          <ul class="nav">
+         <!--  <ul class="nav">
             <li class="active"><a href="#data">Data</a></li>
             <li><a href="#layout">Layout</a></li>
             <li><a href="#mapping">Mapping</a></li>
             <li><a href="#options">Visualization</a></li>
             <li><a href="#export">Export</a></li>
-          </ul>
-          <ul class="nav pull-right">
+          </ul> -->
+<!--           <ul class="nav pull-right">
             <li><a href="http://raw.densitydesign.org">Need help ?</a></li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div> 

@@ -60,11 +60,13 @@
 			$list = array();
 			while($row = $st->fetch())
 			{
+
 				foreach( $row as $index=>$value)
 				{	
 					if(is_int($index))									
 						unset($row[$index]);
-					$value = trim($value, ',');
+					else
+						$row[$index] = str_replace(",", " ", $row[$index]);
 				}
 				$list[] = $row;
 			}
