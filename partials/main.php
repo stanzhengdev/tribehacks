@@ -3,7 +3,7 @@
 	<section id="data">
 		<h3>Data</h3>
 		<div class="row-fluid">
-			<textarea id="datacontainer" placeholder="Paste your text or drag-and-drop a file here. No data on hand? Choose one of our sample!" ng-model="text" ng-init="datacontainerInit('<?php echo 'x, y \n 1, 2 \n 3, 4'?>')"></textarea>
+			<textarea id="datacontainer" class="span12" width="100%" placeholder="Paste your text or drag-and-drop a file here. No data on hand? Choose one of our sample!" ng-model="text" ng-init="datacontainerInit('<?php echo ($_COOKIE["data"]);?>')"></textarea>
 		</div>
 		<div ng-show="error &amp;&amp; !loading" class="alert alert-danger">{{error}}</div>
 		<div ng-show="!error &amp;&amp; data.length &amp;&amp; !loading" class="alert alert-success"><span>Everything seems fine with your data! Please continue</span></div>

@@ -61,8 +61,11 @@
 			while($row = $st->fetch())
 			{
 				foreach( $row as $index=>$value)
-					if(is_int($index))
+				{	
+					if(is_int($index))									
 						unset($row[$index]);
+					$value = trim($value, ',');
+				}
 				$list[] = $row;
 			}
 

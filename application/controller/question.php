@@ -51,6 +51,40 @@ class Controller_Question{
 		$app->render('layout/footer');
 	}
 
+
+    function outputCSV($data) {
+    	$output = "";
+    	foreach( $data as $key=>$p)
+    		if( $key == 0){
+    			$last = end($p);
+ 	    		foreach( $p as $j=>$value)
+	    		{
+	    			$output .= $j;
+	    			if( $value != $last)
+	    				$output .=', ';
+	    		}   			
+    		}
+
+
+	    	$output .= ' \n ';
+    			
+    	foreach ( $data as $key=>$p)
+    	{
+
+    		$output.= addcslashes(implode(',', $p) . ' \n ', '\',');
+    		
+    	}
+    		
+
+
+
+    	return $output;
+
+
+
+    }
+
+
 	public function generate()
 	{
 		if( isset( $_POST['question']))
@@ -73,13 +107,13 @@ class Controller_Question{
 
 		$app = new App();
 
-		$app->data = $data;
+		setcookie("data",$this->outputCSV($data), time()+36*40*34);
 
 		$app->render('layout/header');
 		$app->render('widget/create');
 		$app->render('layout/footer');
 
-		
+
 
 	}
 }
