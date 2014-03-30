@@ -5,37 +5,18 @@ class Controller_Answer{
 
 	}
 
-	public function getanswers()
+	public static function getanswers($survey, $question, $params)
 	{
-		if( isset( $_GET['survey']))
-			$survey_id = $_GET['survey'];
-		else{
-			echo json_encode(array("ok"=>false));
-			exit();
-		}
-
-		if( isset( $_GET['question']))
-			$question_id = $_GET['question'];
-		else{
-			echo json_encode(array("ok"=>false));
-			exit();
-		}
-
-		if( isset( $_GET['params']))
-			$params = mysql_real_escape_string($_GET['params']);
-		else{
-			echo json_encode(array("ok"=>false));
-			exit();
-		}
+		
 
 		$arr = array(
-			"detail"=>explode(',', $params),
-			"survey"=>$survey_id,
-			"question"=>$question_id ,
+			"detail"=>$params,
+			"survey"=>$survey->id,
+			"question"=>$question->id ,
 		);
 
-		$answers = Model_Answer::query( $arr);
-		echo json_encode($answers);
+		return  Model_Answer::query( $arr);
+		// echo json_encode($answers);
 
 
 

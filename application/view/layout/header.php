@@ -1,64 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title><?php echo $this->page_title?></title>
-  <script>
-  var oldieCheck = Boolean(document.getElementsByTagName('html')[0].className.match(/\soldie\s/g));
-  if(!oldieCheck) {
-  document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"><\/script>');
-  } else {
-  document.write('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"><\/script>');
-  }
-  </script>
-  <script>
-  if(!window.jQuery) {
-  if(!oldieCheck) {
-    document.write('<script src="vendor/gumbyframework/gumby/js/libs/jquery-2.0.2.min.js"><\/script>');
-  } else {
-    document.write('<script src="vendor/gumbyframework/gumby/js/libs/jquery-1.10.1.min.js"><\/script>');
-  }
-  }
-  </script>
-  <link href="vendor/gumbyframework/gumby/css/gumby.css" type="text/css" rel="stylesheet">
-  <script src="vendor/gumbyframework/gumby/js/libs/modernizr-2.6.2.min.js"></script>
-  <meta name="viewport" content="width=device-width, user-scalable=no">
-</head>
-<body>
-<div id="nav1" class="navbar">
-    <div class="row">
-        <a href="#" gumby-trigger="#nav1 &gt; .row &gt; ul" class="toggle"><i class="icon-menu"></i></a>
-        <h1 class="four columns logo">
-          <a href="?r=site">
-            <!-- <img src="public/img/logo.png" gumby-retina /> -->
-            Widgetize.
-          </a>
-        </h1>
-        <ul class="eight columns">
-          <li><a href="?r=site/index"><i class="icon-megaphone"></i> Forums</a></li>
-          <li>
-            <a href="?r=user/index"><i class="icon-users"></i> Users</a>
-          </li>
-          <li class="field"><input type="search" placeholder="Search" class="search input"></li>
-          <li>
-            <a href="<?php echo (isset($_SESSION["auth"]) ) ? "#" : "?r=site/login"?>"><i class="icon-user"></i> <?php echo (isset($_SESSION["auth"]) ) ? $_SESSION["user_name"] : "Login"?></a>
-            
-            <?php if (isset($_SESSION["auth"])): ?>
-                  <div class="dropdown">
-                    <ul>
-                      <?php if($this->user->isAdmin()):?>
-                        <li><a href="?r=admin"><i class="icon-cog"></i> Administration</a></li>
-                      <?php endif;?>
-                      <li><a href="?r=site/logout"><i class="icon-logout"></i>&nbsp;Logout</a></li>
+<html ng-app="raw">
+    <head>
+        <meta charset="utf8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <base href="/">
+        <title>RAW</title>
+        <!-- CSS-->
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:100,400,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="components/bootstrap/docs/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="components/bootstrap/docs/assets/css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="components/codemirror/lib/codemirror.css">
+        <link rel="stylesheet" href="components/angular-ui/build/angular-ui.min.css">
+        <link rel="stylesheet" href="components/select2/select2.css">
+        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="components/angular-bootstrap-colorpicker/css/colorpicker.css">
 
-                    </ul>
-                  </div>
-              <?php endif; ?>
-          </li>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-          <!--
-          <li><a href="<?php echo (isset($_SESSION["auth"]) ) ? "?r=site/logout" : "?r=site/login"?>"><i class="icon-user"></i> <?php echo (isset($_SESSION["auth"]) ) ? "Logout" : "Login"?></a></li>
-        -->
-          
-        </ul>
-    </div>
-  </div>
+        <!-- Google Analytics-->
+        <script src="js/analytics.js"></script>
+        <script src="components/jquery/jquery.min.js"></script>
+    </head>
+
+    <body data-spy="scroll" data-target="#header">
+        <div id="header" class="navbar">
+        <div class="navbar-inner">
+        <div class="container"><a href="/" class="brand">WIDGEN</a>
+          <ul class="nav">
+            <li class="active"><a href="#data">Data</a></li>
+            <li><a href="#layout">Layout</a></li>
+            <li><a href="#mapping">Mapping</a></li>
+            <li><a href="#options">Visualization</a></li>
+            <li><a href="#export">Export</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li><a href="http://raw.densitydesign.org">Need help ?</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> 

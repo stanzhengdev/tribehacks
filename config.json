@@ -1,0 +1,42 @@
+{
+	"charts" :
+	[
+		"charts/treemap.js",
+		"charts/bar.js",
+		"charts/pie.js",
+		"charts/bubblechart.js",
+		"charts/alluvial.js",
+		"charts/circlepacking.js",
+		"charts/circulardendrogram.js",
+		"charts/dendrogram.js",
+		"charts/binning.js"
+	],
+
+	"samples" :
+	[
+		{
+			"url" : "samples/dispersion.csv",
+			"title" : "movies (Dispersions)"
+		},
+		{
+			"url" : "samples/pop.csv",
+			"title" : "Population"
+		},
+		{
+			"url" : "samples/correlations.csv",
+			"title" : "cocktails (Correlations)"
+		},
+		{
+			"url" : "samples/categorical.csv",
+			"title" : "titanic (multi variate)"
+		},
+		{
+			"url" : "samples/flow.csv",
+			"title" : "music industry (Flows)"
+		},
+		{
+			"url" : "samples/survey.csv",
+			"title" : "IPUR Info"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+COUNT(*),gender,answer_label
+2,,"Syria will not comply by June 30, 2014, but it ultimately will comply with the agreement"
+17,f,"Don't know"
+11,f,"Syria will comply by June 30, 2014"
+141,f,"Syria will not comply by June 30, 2014, but it ultimately will comply with the agreement"
+48,f,"Syria will not comply with the agreement"
+48,m,"Don't know"
+80,m,"Syria will comply by June 30, 2014"
+402,m,"Syria will not comply by June 30, 2014, but it ultimately will comply with the agreement"
+148,m,"Syria will not comply with the agreement"
