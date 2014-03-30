@@ -1,0 +1,5 @@
+{
+    "require": {
+        "gumbyframework/gumby": ">1"
+    }
+}
