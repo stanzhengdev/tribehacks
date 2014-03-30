@@ -23,16 +23,6 @@ raw.charts.bar = function(){
 				value : [],
 				map : function(d) { return this.value.length ? d[this.value[0].key] : null; }
 			},
-
-			size : {
-				title : 'Size',
-				accept : ['number'],
-				value : [],
-				single : true,
-				map : function(d,t) {
-					return this.value.length ? parseFloat(d[this.value[0].key]) + parseFloat(t) : parseFloat(t) + 1;
-				}
-			}
 		}),
 
 		options : {

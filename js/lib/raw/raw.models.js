@@ -227,6 +227,12 @@ raw.models.pie = function(map){
 					accept : ['number','string'],
 					single : true,
 					value : []
+				},
+				z : {
+					title : 'Legend Prefix',
+					accept : ['number','string'],
+					single : true,
+					value : []
 				}
 			},
 
@@ -242,6 +248,7 @@ raw.models.pie = function(map){
 	        	// structure
 	        	point.x = model.structure.x.value.length ? parseFloat(d[model.structure.x.value[0].key]) : 0;
 	        	point.y = model.structure.y.value.length ? d[model.structure.y.value[0].key] : 0;
+	        	point.z = model.structure.z.value.length ? d[model.structure.z.value[0].key] : 0;
           	// map
             for (var m in model.map){
             	point[m] = model.map[m].map(d, 0);

@@ -101,7 +101,11 @@ raw.charts.pie = function(){
       .attr("dy", ".35em")
       .style("text-anchor", "middle")
       .text(function(d) {
-      	return d.data.y; });
+      	if (d.data.z == null && d.data.z!=0){
+			return d.data.y;
+      	}
+      	else
+      		return d.data.z + " " +d.data.y; });
 
 
 
