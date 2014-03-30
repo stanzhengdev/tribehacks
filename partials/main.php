@@ -96,9 +96,16 @@
 	<section id="export" ng-show="data.length">
 		<h3>Export</h3>
 		<div class="row-fluid">
+			<span class
+
 			<downloader type="svg" label="svg" source="#vis" class="span3"></downloader>
 			<downloader type="png" label="png (beta)" source="#vis" class="span3"></downloader>
-			<downloader type="json" label="data (json)" source="{{chart.model.applyOn(data)}}" class="span3"></downloader>
+			<!-- <downloader type="json" label="data (json)" source="{{chart.model.applyOn(data)}}" class="span3"></downloader> -->
+			<div class="span3">
+				<p class="header">Send to Email</p>
+				<p><input class="span12" name="emailToSend" placeholder="Enter the email address to share"></p>
+				<p><a href="#" class="btn success span12"> <i class="icon-envelope icon-white"></i>Send</a></p>
+			</div>
 			<div class="span3">
 				<p class="header">Embed in HTML</p>
 				<coder source="#vis &gt; svg"></coder>
