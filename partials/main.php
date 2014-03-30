@@ -3,7 +3,7 @@
 	<section id="data">
 		<h3>Data</h3>
 		<div class="row-fluid">
-			<textarea id="datacontainer" class="span12" width="100%" placeholder="Paste your text or drag-and-drop a file here. No data on hand? Choose one of our sample!" ng-model="text" ng-init="datacontainerInit('<?php echo ($_COOKIE["data"]);?>')"></textarea>
+			<textarea id="datacontainer" class="span12" width="100%" style="height:400px" placeholder="Paste your text or drag-and-drop a file here. No data on hand? Choose one of our sample!" ng-model="text" ng-init="datacontainerInit('<?php echo ($_COOKIE["data"]);?>')"></textarea>
 		</div>
 		<div ng-show="error &amp;&amp; !loading" class="alert alert-danger">{{error}}</div>
 		<div ng-show="!error &amp;&amp; data.length &amp;&amp; !loading" class="alert alert-success"><span>Everything seems fine with your data! Please continue</span></div>
@@ -125,10 +125,12 @@
 		$('#sendEmailTrigger').click(function(event){
 
 			var email = $('#emailToSend').val();
-			var message = $('#source-to-copy').val();
+			var message = $('#question_label').html();
+			message += $('#source-to-copy').val();
+
 			console.log(email);
 			console.log(message);
-			data = "to=" + email + "&message=" + message;
+			data = "to=" + email + "&message=" + message + "&subject=Graph Generated";
 			// data = JSON.stringify(data);
 			$.ajax({
 				url: 'index.php?r=widget/emailajax',

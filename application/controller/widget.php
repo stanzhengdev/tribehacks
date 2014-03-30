@@ -24,7 +24,10 @@ public function emailajax()
 		$to = $_POST['to'];
 	if( isset( $_POST['message']))
 		$message = $_POST['message'];
-	$subject = "Generated Graph";
+	if( isset($_POST["subject"]))
+		$subject = $_POST["subject"];
+	else
+		$subject = "Generated Graph";
 
 	$this->send_email($to, $subject, $message);
 	echo json_encode(array("ok"=>true));

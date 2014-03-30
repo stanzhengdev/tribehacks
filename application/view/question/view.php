@@ -1,7 +1,8 @@
 <div class="row-fluid">
 	<div class="container">
 		<div class="span12">
-			<h1>Generate Widget for question <em>"<?php echo $this->question->title?>"</em></h1>
+			<h1>Generate Widget for question:<h1> 
+			<h2><small><em>"<?php echo $this->question->title?>"</em></small></h2>
 			<form class="form" id="generate-form" action="?r=question/generate" method="post">
 				<fieldset>
 					<legend>

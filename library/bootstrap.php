@@ -2,7 +2,7 @@
 if(!empty($_GET['r']))
 	$url = htmlspecialchars($_GET['r']);
 else
-	$url = "site/index";
+	$url = "survey/index";
 
 $terms = array();
 $terms = explode("/", $url, 2);
@@ -18,12 +18,12 @@ if(class_exists($class_name))
 		$class->$action_name();
 	else {
 		ob_start();
-		header("Location: ?r=site/index"); 
+		header("Location: ?r=survey/index"); 
 		ob_end_flush();	
 	}	
 }
 else{
 	ob_start();
-	header("Location: ?r=site/index");
+	header("Location: ?r=survey/index");
 	ob_end_flush();
 }

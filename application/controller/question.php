@@ -106,7 +106,7 @@ class Controller_Question{
 		//var_dump($data);
 
 		$app = new App();
-
+		$app->question = $question;
 		setcookie("data",$this->outputCSV($data), time()+36*40*34);
 
 		$app->render('layout/header');

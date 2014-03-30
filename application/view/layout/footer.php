@@ -7,8 +7,7 @@
             <p>&copy; <?=date('Y')?></p>
           </div>
           <div class="span4">
-            <p><a href="mailto:raw@densitydesign.org">raw@densitydesign.org</a></p>
-            <p><a href="http://twitter.com/densitydesign">@densitydesign</a></p>
+
           </div>
           <div class="span4">
             <p><a href="http://github.com/stanzheng/tribehacks">GitHub</a></p>
