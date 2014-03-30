@@ -18,9 +18,22 @@ public function view()
 	$app->render('layout/footer');
 }
 
+public function emailajax()
+{
+	if( isset( $_POST['to']))
+		$to = $_POST['to'];
+	if( isset( $_POST['message']))
+		$message = $_POST['message'];
+	$subject = "Generated Graph";
+
+	$this->send_email($to, $subject, $message);
+	echo json_encode(array("ok"=>true));
+}
+
 
 public function send_email($to, $subject, $body)
 {
+
 	$sendgrid = new SendGrid("jmateo","Amanda13");
 	$sendgrid->register_autoloader();
 	$mail = new SendGrid\Email();

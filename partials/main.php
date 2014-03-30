@@ -103,8 +103,8 @@
 			<!-- <downloader type="json" label="data (json)" source="{{chart.model.applyOn(data)}}" class="span3"></downloader> -->
 			<div class="span3">
 				<p class="header">Send to Email</p>
-				<p><input class="span12" name="emailToSend" placeholder="Enter the email address to share"></p>
-				<p><a href="#" class="btn success span12"> <i class="icon-envelope icon-white"></i>Send</a></p>
+				<p><input class="span12" id="emailToSend" name="emailToSend" placeholder="Enter the email address to share"></p>
+				<p><a id="sendEmailTrigger" href="#" class="btn success span12"> <i class="icon-envelope icon-white"></i>Send</a></p>
 			</div>
 			<div class="span3">
 				<p class="header">Embed in HTML</p>
@@ -117,3 +117,31 @@
 <div class="container">
 	<div id="push"></div>
 </div>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+		$('#sendEmailTrigger').click(function(event){
+
+			var email = $('#emailToSend').val();
+			var message = $('#source-to-copy').val();
+			console.log(email);
+			console.log(message);
+			data = "to=" + email + "&message=" + message;
+			// data = JSON.stringify(data);
+			$.ajax({
+				url: 'index.php?r=widget/emailajax',
+				data: data,
+				type: 'post',
+				dataType: 'json',
+				success: function(r)
+				{
+					console.log(r);
+				}
+			});
+			event.preventDefault();
+
+		});
+	});
+</script>
