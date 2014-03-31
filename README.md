@@ -27,11 +27,10 @@ In your charts this is kind of the documention
     Title - name of your graph      
     Description - description   
     options - dragable perspectives on your graph this of this as the DYNAMIC variables you want to change (size of x,y,colors,etc)
-
-    Render - where you want to write all your D3.JS templating logic; majority of d3 maps at https://github.com/mbostock/d3/wiki/Gallery can be copy pasted, and then retrofitted to reflect the new data. 
+    Render - where you want to write all your D3.JS templating logic; majority of d3 maps at the D3 Gallery can be copy pasted, and then retrofitted to reflect the new data. 
 "render : function(data, target) {"
 Data is your info from the textbox, target is mapped to the SVG on your view.
-
+https://github.com/mbostock/d3/wiki/Gallery
 
 PHP API
 ----
