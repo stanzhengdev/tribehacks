@@ -9,7 +9,7 @@ Widgen Dependency Stack
 ---
 - PHP create of API
 - MYSQL Server
-- DensityDesign Raw Library [Link] ->
+- DensityDesign Raw Library [Link] -> https://github.com/stanzheng/raw (version that was hacked on) 
     - AngularJS
     - D3.JS
 
