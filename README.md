@@ -32,3 +32,6 @@ In your charts this is kind of the documention
 "render : function(data, target) {"
 Data is your info from the textbox, target is mapped to the SVG on your view.
 
+
+PHP API
+=====
