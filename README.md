@@ -39,11 +39,11 @@ Setup MYSQL, and use the config/sample_db.php as your template. After filling in
 This must use some sort of PHP backend server to run. Also make sure mysql is running. You can easily use this command if you have PHP 5.3+ to start a server.
 ```shell
 #terminal
-php -S localhost:3000
+php -S localhost:8888
 
 ```
 
-After that you can navigate to the route http://localhost:8888/?r=site to see the surveys in the database. (assuming the schema is all the same)
+After that you can navigate to the route http://localhost:8888/?r=survey to see the surveys in the database. (assuming the schema is all the same)
 
 
 Contact
@@ -54,4 +54,4 @@ Contact
 
 License
 ---
-mit
+MIT
