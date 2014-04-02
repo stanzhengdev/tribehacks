@@ -34,6 +34,8 @@ https://github.com/mbostock/d3/wiki/Gallery
 
 PHP API
 ----
+Setup MYSQL, and use the config/sample_db.php as your template. After filling in your settings rename it to config/db.php.
+
 This must use some sort of PHP backend server to run. Also make sure mysql is running. You can easily use this command if you have PHP 5.3+ to start a server.
 ```shell
 #terminal
